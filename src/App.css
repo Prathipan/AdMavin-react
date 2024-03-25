@@ -1,38 +1,97 @@
-.App {
+/* .App {
   text-align: center;
-}
+} */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.element-container{
+  text-align: center;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.bucket{
+  border: 2px solid black;
+  border-radius: 8px;
+  height: 500px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttons{
+  display: flex;
+  flex-direction: column;
+  margin : auto 20px;
+}
+
+.button{
+  margin-top: 15px ;
+  cursor: pointer;
+  text-transform: uppercase;
+  background: transparent;
+  color: black;
+  font-weight: 700;
+  transition: all 0.3s linear;
+  border: 2px solid black;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  padding: 12px 20px;
+  text-decoration: none;
+}
+.button:hover{
+  background-color: black;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.bucket-name{
+  border : 1px solid gray;
+  padding: 10px;
+  width: 100px;
+  margin-top: 15px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 700;
+  border: 2px solid black;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+.selected{
+  background-color: aquamarine;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.square-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.square {
+  border: 1px solid #000;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.clicked {
+  background-color: #ccc;
+}
+
+
+.pane {
+  flex: 1;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+  height: 400px; /* Adjust height as needed */
+  overflow-y: auto; /* Add scrollbar when content overflows */
+}
+
+.pane-container{
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.list-ul{
+  list-style: none;
 }

@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import ElementTransfer from "./components/ElementTransfer";
+import SplitBox from "./components/SplitBox";
+import List from "./components/NestedList/List";
+import { BrowserRouter, Routes,Route } from "react-router-dom";
+import Home from "./components/Home";
+import HitGame from "./components/HitGame";
+
 
 function App() {
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+      <Routes>
+        <Route index element={<Home />} />
+        <Route path="element-transfer" element={<ElementTransfer />} />
+        <Route path="list" element={<List />} />
+        <Route path="hit-game" element={<HitGame />}/>
+      </Routes>
+      </BrowserRouter>
+      {/* <HitGame /> */}
+      {/* <SplitBox /> */}
     </div>
   );
 }
